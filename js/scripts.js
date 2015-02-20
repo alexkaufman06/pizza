@@ -36,3 +36,24 @@ var Pizza = {
   return this.baseSlices;
   }
 };
+
+$(function() {
+  $("form#pizza-order").submit(function(event) {
+    event.preventDefault();
+
+    var inputtedSize = parseInt($("input#pizza-size").val());
+    var inputtedTopping = $("select#pizza-topping").val();
+
+    var newPizza = Object.create(Pizza);
+    newPizza.size = inputtedSize;
+    newPizza.type = inputtedTopping;
+
+    $("input#pizza-size").val("");
+    $("input#pizza-topping").val("");
+
+    $(".price").text(newPizza.price());
+    $(".slices").text(newPizza.slices());
+    $("#price-slices").show();
+
+  });
+});
