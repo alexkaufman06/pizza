@@ -35,5 +35,19 @@ describe("Pizza", function() {
       testPizza.type = "pepperoni";
       expect(testPizza.price()).to.equal(22);
     });
+
+    it("returns the additional price for ordering a chicken pizza", function() {
+      var testPizza = Object.create(Pizza);
+      testPizza.size = 18;
+      testPizza.type = "chicken";
+      expect(testPizza.price()).to.equal(22);
+    });
+
+    it("returns the additional price for ordering a sasauge pizza", function() {
+      var testPizza = Object.create(Pizza);
+      testPizza.size = 18;
+      testPizza.type = "sausage";
+      expect(testPizza.price()).to.equal(22);
+    });
   });
 });
