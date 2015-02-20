@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.2.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>¡Pizzaria!</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>¡Pizzaria!</h1>
+      <form id="pizza-order">
+        <div class="form-group">
+          <label for="pizza-size">Enter a pizza size in inches:</label>
+          <input id="pizza-size" class="form-control" placeholder="Your pizza size (8-18in)" type="number" min="8" max="18">
+          <label for="pizza-topping">Select Pizza Topping:</label>
+          <select id="pizza-topping" class="form-control">
+            <option value="cheese">Cheese</option>
+            <option value="pepperoni">Pepperoni</option>
+            <option value="chicken">Chicken</option>
+            <option value="sausage">Sausage</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-success">Find Price and Slices!</button>
+      </form>
+      <div id="price-slices">
+        <p>Your total is: $ <span class="price"></span></p>
+        <p>Your pizza has <span class="slices"></span> slices!</p>
+      </div>
+    </div>
+  </body>
+</html>
