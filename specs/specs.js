@@ -1,7 +1,8 @@
 describe("Pizza", function() {
   describe("price()", function() {
-    it("returns the initial price of cooking a pizza")
+    it("returns the base price of cooking a pizza", function() {
       var testPizza = Object.create(Pizza);
-      expect(textPizza.price()).to.equal(1);
+      expect(testPizza.basePrice).to.equal(1);
+    });
   });
 });
