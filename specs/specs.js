@@ -43,11 +43,33 @@ describe("Pizza", function() {
       expect(testPizza.price()).to.equal(22);
     });
 
-    it("returns the additional price for ordering a sasauge pizza", function() {
+    it("returns the additional price for ordering a sausage pizza", function() {
       var testPizza = Object.create(Pizza);
       testPizza.size = 18;
       testPizza.type = "sausage";
       expect(testPizza.price()).to.equal(22);
+    });
+  });
+
+  describe("slices()", function() {
+    it("returns the number of slices for a 18 inch pizza with pepperoni", function() {
+      var testPizza = Object.create(Pizza);
+      testPizza.size = 18;
+      testPizza.type = "pepperoni";
+      expect(testPizza.slices()).to.equal(10)
+    });
+
+    it("returns the number of slices for a 16 inch pizza", function() {
+      var testPizza = Object.create(Pizza);
+      testPizza.size = 16;
+      expect(testPizza.slices()).to.equal(10)
+    });
+
+    it("returns the number of slices for a 14 inch pizza with chicken", function() {
+      var testPizza = Object.create(Pizza);
+      testPizza.size = 14;
+      testPizza.type = "chicken";
+      expect(testPizza.slices()).to.equal(8)
     });
   });
 });
