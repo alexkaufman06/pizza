@@ -1,6 +1,6 @@
 var Pizza = {
   basePrice: 5,
-  toppings: ["pepperoni", "chicken"],
+  toppings: ["pepperoni", "chicken", "sausage"],
   price: function() {
     if (this.size <= 12) {
       this.basePrice += 9;
